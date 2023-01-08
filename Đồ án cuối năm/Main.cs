@@ -12,8 +12,10 @@ namespace Đồ_án_cuối_năm
 {
     public partial class Main : Form
     {
-        public Main()
+        Đồ_án_cuối_năm.Login cur_login;
+        public Main(Đồ_án_cuối_năm.Login login)
         {
+            cur_login = login;
             InitializeComponent();
         }
 
@@ -46,10 +48,36 @@ namespace Đồ_án_cuối_năm
             pn_Menu.Visible = true;
         }
 
-
         private void btn_Filter_Click(object sender, EventArgs e)
         {
-            pn_filter.Visible = true;
+            if (pn_filter.Visible == false) 
+            {
+                pn_filter.Visible = true;
+            }
+            else
+            {
+                pn_filter.Visible = false;
+                txb_Find.Text = "";
+            }
+        }
+
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+            pn_LikeList.Visible = false;
+        }
+
+        private void btn_History_Click(object sender, EventArgs e)
+        {
+            History newHistory = new History();
+            this.Hide();
+            newHistory.ShowDialog();
+            this.Show();
+        }
+
+        private void btn_LogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            cur_login.Show();
         }
     }
 }

@@ -1,0 +1,15 @@
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\bin\Debug\Đồ án cuối năm.exe.config
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\bin\Debug\Đồ án cuối năm.exe
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\bin\Debug\Đồ án cuối năm.pdb
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debug\Đồ án cuối năm.csproj.AssemblyReference.cache
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debug\Đồ án cuối năm.csproj.SuggestedBindingRedirects.cache
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debug\Đồ_án_cuối_năm.Properties.Resources.resources
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debug\Đồ án cuối năm.csproj.GenerateResource.cache
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debug\Đồ án cuối năm.csproj.CoreCompileInputs.cache
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debug\Đồ án cuối năm.exe
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debug\Đồ án cuối năm.pdb
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debug\Đồ_án_cuối_năm.Main.resources
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debug\Đồ_án_cuối_năm.Login.resources
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debug\Đồ_án_cuối_năm.User.resources
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debug\Đồ_án_cuối_năm.Messenger.resources
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debug\Đồ_án_cuối_năm.History.resources

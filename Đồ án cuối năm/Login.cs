@@ -12,6 +12,7 @@ namespace Đồ_án_cuối_năm
 {
     public partial class Login : Form
     {
+        
         public Login()
         {
             InitializeComponent();
@@ -24,10 +25,10 @@ namespace Đồ_án_cuối_năm
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            Main main = new Main();
+            Main main = new Main(this);
             this.Hide();
             main.ShowDialog();
-            this.Close();
+            
         }
 
         private void btn_Register_Click(object sender, EventArgs e)

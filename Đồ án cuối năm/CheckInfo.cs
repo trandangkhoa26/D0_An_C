@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Đồ_án_cuối_năm
 {
-    public partial class Form1 : Form
+    public partial class CheckInfo : Form
     {
-        public Form1()
+        public CheckInfo()
         {
             InitializeComponent();
+        }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

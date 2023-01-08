@@ -32,7 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Exit = new System.Windows.Forms.Button();
             this.pb_Logo = new System.Windows.Forms.PictureBox();
-            this.lb_AppName = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btn_Send = new System.Windows.Forms.Button();
             this.btn_Picture = new System.Windows.Forms.Button();
@@ -41,6 +40,7 @@
             this.pn_Chat = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.pb_AvaReciver = new System.Windows.Forms.PictureBox();
+            this.lb_AppName = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_AvaReciver)).BeginInit();
@@ -49,9 +49,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightCoral;
+            this.panel1.Controls.Add(this.lb_AppName);
             this.panel1.Controls.Add(this.btn_Exit);
             this.panel1.Controls.Add(this.pb_Logo);
-            this.panel1.Controls.Add(this.lb_AppName);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(705, 116);
@@ -83,23 +83,11 @@
             this.pb_Logo.TabIndex = 1;
             this.pb_Logo.TabStop = false;
             // 
-            // lb_AppName
-            // 
-            this.lb_AppName.AutoSize = true;
-            this.lb_AppName.BackColor = System.Drawing.Color.Transparent;
-            this.lb_AppName.Font = new System.Drawing.Font("UVN Da Lat", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_AppName.ForeColor = System.Drawing.Color.DarkRed;
-            this.lb_AppName.Location = new System.Drawing.Point(100, 20);
-            this.lb_AppName.Name = "lb_AppName";
-            this.lb_AppName.Size = new System.Drawing.Size(164, 84);
-            this.lb_AppName.TabIndex = 0;
-            this.lb_AppName.Text = "Sinder";
-            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.Linen;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("UVN Da Lat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("SVN-Sarifa", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.DarkRed;
             this.textBox1.Location = new System.Drawing.Point(39, 777);
             this.textBox1.Multiline = true;
@@ -173,11 +161,11 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("UVN Da Lat", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("SVN-Sarifa", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.DarkRed;
             this.label12.Location = new System.Drawing.Point(113, 132);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(119, 36);
+            this.label12.Size = new System.Drawing.Size(150, 40);
             this.label12.TabIndex = 1;
             this.label12.Text = "Người nhận";
             // 
@@ -189,6 +177,18 @@
             this.pb_AvaReciver.Size = new System.Drawing.Size(68, 55);
             this.pb_AvaReciver.TabIndex = 12;
             this.pb_AvaReciver.TabStop = false;
+            // 
+            // lb_AppName
+            // 
+            this.lb_AppName.AutoSize = true;
+            this.lb_AppName.BackColor = System.Drawing.Color.Transparent;
+            this.lb_AppName.Font = new System.Drawing.Font("SVN-Appleberry", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_AppName.ForeColor = System.Drawing.Color.DarkRed;
+            this.lb_AppName.Location = new System.Drawing.Point(118, -9);
+            this.lb_AppName.Name = "lb_AppName";
+            this.lb_AppName.Size = new System.Drawing.Size(281, 118);
+            this.lb_AppName.TabIndex = 7;
+            this.lb_AppName.Text = "Sinder";
             // 
             // Messenger
             // 
@@ -224,7 +224,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_Exit;
         private System.Windows.Forms.PictureBox pb_Logo;
-        private System.Windows.Forms.Label lb_AppName;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btn_Send;
         private System.Windows.Forms.Button btn_Picture;
@@ -233,5 +232,6 @@
         private System.Windows.Forms.Panel pn_Chat;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pb_AvaReciver;
+        private System.Windows.Forms.Label lb_AppName;
     }
 }
