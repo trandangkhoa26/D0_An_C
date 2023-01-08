@@ -46,7 +46,8 @@ namespace Đồ_án_cuối_năm
             pn_Menu.Visible = true;
         }
 
-        private void btn_Filter_MouseClick(object sender, MouseEventArgs e)
+
+        private void btn_Filter_Click(object sender, EventArgs e)
         {
             pn_filter.Visible = true;
         }
