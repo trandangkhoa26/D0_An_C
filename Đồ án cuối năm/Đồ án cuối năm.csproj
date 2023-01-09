@@ -52,7 +52,10 @@
     <Compile Include="CheckInfo.Designer.cs">
       <DependentUpon>CheckInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAO\ACCOUNT_DAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\TINNHAN_DAO.cs" />
+    <Compile Include="DAO\YEUTHICH_DAO.cs" />
     <Compile Include="DTO\ACCOUNT_DTO.cs" />
     <Compile Include="DTO\TINNHAN_DTO.cs" />
     <Compile Include="DTO\YEUTHICH_DTO.cs" />
