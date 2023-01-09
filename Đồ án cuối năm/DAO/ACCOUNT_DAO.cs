@@ -16,7 +16,7 @@ namespace Đồ_án_cuối_năm.DAO
             private set { instance = value; }
         }
 
-        public bool Login(string userName, string passWord)
+        public bool DangNhap(string userName, string passWord)
         {
             string query = "Login @userName , @passWord";
 
@@ -33,9 +33,26 @@ namespace Đồ_án_cuối_năm.DAO
             return id;
         }
 
+        public int GetCustomerIDbyName(string userName)
+        {
+            string query = "select Id from NGUOIDUNG where TenNguoiDung= N'" + userName +"'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            int id = Convert.ToInt32(data.Rows[0]["Id"]);
+            return id;
+        }
+
         public ACCOUNT_DTO GetCustomerInfo(string userName, string passWord)
         {
-            string query = "select * from NGUOIDUNG where TaiKhoan='" + userName + "'and MatKhau ='" + passWord + "'";
+            string query = String.Format("select * from nguoidung where TaiKhoan ='" + userName + "' and MatKhau ='" + passWord + "'");
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            
+            ACCOUNT_DTO acc = new ACCOUNT_DTO(data.Rows[0]);
+            return acc;
+        }
+
+        public ACCOUNT_DTO GetCustomerInfoID(int id)
+        {
+            string query = String.Format("select * from nguoidung where Id ="+id);
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
             ACCOUNT_DTO acc = new ACCOUNT_DTO(data.Rows[0]);
@@ -60,5 +77,73 @@ namespace Đồ_án_cuối_năm.DAO
             DataProvider.Instance.ExecuteQuery(query);
         }
 
+        public List<ACCOUNT_DTO> GetNguoiDung(int tk)
+        {
+            List<ACCOUNT_DTO> list = new List<ACCOUNT_DTO>();
+            string query = string.Format("select * from NGUOIDUNG where Id !=" +tk);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                ACCOUNT_DTO nguoi = new ACCOUNT_DTO(item);
+                list.Add(nguoi);
+            }
+            return list;
+        }
+
+        public List<ACCOUNT_DTO> GetNguoiDungMF(string gioitinh)
+        {
+            List<ACCOUNT_DTO> list = new List<ACCOUNT_DTO>();
+            string query =string.Format( "select * from NGUOIDUNG where GioiTinh = N'"+gioitinh+"' and Id != " + Global.current_ID);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                ACCOUNT_DTO nguoi = new ACCOUNT_DTO(item);
+                list.Add(nguoi);
+            }
+            return list;
+        }
+
+        public List<ACCOUNT_DTO> SearchTruong(string truong,int tk )
+        {
+            string temp = "";
+            if (truong == "")
+                temp = "or 1 = 1";
+            List<ACCOUNT_DTO> list = new List<ACCOUNT_DTO>();
+
+            string query = string.Format("SELECT * FROM NGUOIDUNG WHERE (dbo.fuConvertToUnsign1(Truong) LIKE N'%' + dbo.fuConvertToUnsign1(N'{0}') + '%' {1}) and Id != " + tk , truong, temp);
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                ACCOUNT_DTO person = new ACCOUNT_DTO(item);
+                list.Add(person);
+            }
+            return list;
+        }
+        public List<ACCOUNT_DTO> SearchYear(int year, int tk)
+        {
+            List<ACCOUNT_DTO> list = new List<ACCOUNT_DTO>();
+            string query = string.Format("select * from NGUOIDUNG where NamSinh ="+year+" and Id !=" + tk);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                ACCOUNT_DTO nguoi = new ACCOUNT_DTO(item);
+                list.Add(nguoi);
+            }
+            return list;
+        }
+        public List<ACCOUNT_DTO> SearchYearSchool(int year,int tk)
+        {
+            List<ACCOUNT_DTO> list = new List<ACCOUNT_DTO>();
+            string query = string.Format("select * from NGUOIDUNG where NamHoc=" + year + " and Id !=" + tk);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                ACCOUNT_DTO nguoi = new ACCOUNT_DTO(item);
+                list.Add(nguoi);
+            }
+            return list;
+        }
     }
 }

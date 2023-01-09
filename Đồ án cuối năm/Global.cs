@@ -13,7 +13,6 @@ namespace Đồ_án_cuối_năm
     {
         public static int current_ID = 0;
         public static string current_user = "";
-        public static string current_username = "";
         public static string current_pass = "";
     }
 }

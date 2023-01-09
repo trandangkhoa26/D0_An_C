@@ -29,7 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lb_AppName = new System.Windows.Forms.Label();
             this.btn_Exit = new System.Windows.Forms.Button();
             this.btn_Menu = new System.Windows.Forms.Button();
             this.pb_Logo = new System.Windows.Forms.PictureBox();
@@ -67,15 +72,19 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pn_ylp = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Delete = new System.Windows.Forms.Button();
             this.pn_ply = new System.Windows.Forms.Panel();
             this.btn_Filter = new System.Windows.Forms.Button();
             this.pn_filter = new System.Windows.Forms.Panel();
-            this.lb_AppName = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.txb_Find = new System.Windows.Forms.TextBox();
             this.btn_Find = new System.Windows.Forms.Button();
+            this.txb_Find = new System.Windows.Forms.TextBox();
+            this.cb_FindWhat = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btn_NotLike = new System.Windows.Forms.Button();
+            this.dgv_ylp = new System.Windows.Forms.DataGridView();
+            this.dgv_ply = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).BeginInit();
             this.pn_Menu.SuspendLayout();
@@ -84,7 +93,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_Avatar)).BeginInit();
             this.pn_LikeList.SuspendLayout();
             this.pn_ylp.SuspendLayout();
+            this.pn_ply.SuspendLayout();
             this.pn_filter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ylp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ply)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -98,6 +110,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(705, 116);
             this.panel1.TabIndex = 0;
+            // 
+            // lb_AppName
+            // 
+            this.lb_AppName.AutoSize = true;
+            this.lb_AppName.BackColor = System.Drawing.Color.Transparent;
+            this.lb_AppName.Font = new System.Drawing.Font("SVN-Appleberry", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_AppName.ForeColor = System.Drawing.Color.DarkRed;
+            this.lb_AppName.Location = new System.Drawing.Point(118, -9);
+            this.lb_AppName.Name = "lb_AppName";
+            this.lb_AppName.Size = new System.Drawing.Size(281, 118);
+            this.lb_AppName.TabIndex = 6;
+            this.lb_AppName.Text = "Sinder";
             // 
             // btn_Exit
             // 
@@ -139,6 +163,7 @@
             this.pb_Logo.Size = new System.Drawing.Size(100, 100);
             this.pb_Logo.TabIndex = 1;
             this.pb_Logo.TabStop = false;
+            this.pb_Logo.Click += new System.EventHandler(this.pb_Logo_Click);
             // 
             // pn_Menu
             // 
@@ -207,6 +232,8 @@
             // pn_Info
             // 
             this.pn_Info.BackColor = System.Drawing.Color.Linen;
+            this.pn_Info.Controls.Add(this.label13);
+            this.pn_Info.Controls.Add(this.label12);
             this.pn_Info.Controls.Add(this.lb_SchoolYear);
             this.pn_Info.Controls.Add(this.lb_Weight);
             this.pn_Info.Controls.Add(this.lb_Height);
@@ -223,9 +250,9 @@
             this.pn_Info.Controls.Add(this.label3);
             this.pn_Info.Controls.Add(this.label2);
             this.pn_Info.Controls.Add(this.label1);
-            this.pn_Info.Location = new System.Drawing.Point(33, 385);
+            this.pn_Info.Location = new System.Drawing.Point(16, 385);
             this.pn_Info.Name = "pn_Info";
-            this.pn_Info.Size = new System.Drawing.Size(475, 319);
+            this.pn_Info.Size = new System.Drawing.Size(508, 337);
             this.pn_Info.TabIndex = 1;
             // 
             // lb_SchoolYear
@@ -233,7 +260,7 @@
             this.lb_SchoolYear.AutoSize = true;
             this.lb_SchoolYear.Font = new System.Drawing.Font("SVN-Sarifa", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_SchoolYear.ForeColor = System.Drawing.Color.DarkRed;
-            this.lb_SchoolYear.Location = new System.Drawing.Point(373, 161);
+            this.lb_SchoolYear.Location = new System.Drawing.Point(145, 204);
             this.lb_SchoolYear.Name = "lb_SchoolYear";
             this.lb_SchoolYear.Size = new System.Drawing.Size(31, 43);
             this.lb_SchoolYear.TabIndex = 15;
@@ -244,11 +271,11 @@
             this.lb_Weight.AutoSize = true;
             this.lb_Weight.Font = new System.Drawing.Font("SVN-Sarifa", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Weight.ForeColor = System.Drawing.Color.DarkRed;
-            this.lb_Weight.Location = new System.Drawing.Point(390, 115);
+            this.lb_Weight.Location = new System.Drawing.Point(408, 115);
             this.lb_Weight.Name = "lb_Weight";
-            this.lb_Weight.Size = new System.Drawing.Size(31, 43);
+            this.lb_Weight.Size = new System.Drawing.Size(45, 43);
             this.lb_Weight.TabIndex = 14;
-            this.lb_Weight.Text = "...";
+            this.lb_Weight.Text = "99";
             // 
             // lb_Height
             // 
@@ -266,7 +293,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("SVN-Sarifa", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DarkRed;
-            this.label10.Location = new System.Drawing.Point(248, 115);
+            this.label10.Location = new System.Drawing.Point(264, 115);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(138, 43);
             this.label10.TabIndex = 12;
@@ -288,7 +315,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("SVN-Sarifa", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DarkRed;
-            this.label8.Location = new System.Drawing.Point(248, 161);
+            this.label8.Location = new System.Drawing.Point(26, 204);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(119, 43);
             this.label8.TabIndex = 10;
@@ -299,7 +326,7 @@
             this.lb_Gender.AutoSize = true;
             this.lb_Gender.Font = new System.Drawing.Font("SVN-Sarifa", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Gender.ForeColor = System.Drawing.Color.DarkRed;
-            this.lb_Gender.Location = new System.Drawing.Point(379, 62);
+            this.lb_Gender.Location = new System.Drawing.Point(395, 62);
             this.lb_Gender.Name = "lb_Gender";
             this.lb_Gender.Size = new System.Drawing.Size(31, 43);
             this.lb_Gender.TabIndex = 9;
@@ -310,7 +337,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("SVN-Sarifa", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DarkRed;
-            this.label5.Location = new System.Drawing.Point(248, 62);
+            this.label5.Location = new System.Drawing.Point(264, 62);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(125, 43);
             this.label5.TabIndex = 8;
@@ -318,11 +345,11 @@
             // 
             // lb_Bio
             // 
-            this.lb_Bio.Font = new System.Drawing.Font("SVN-Sarifa", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Bio.Font = new System.Drawing.Font("SVN-Sarifa", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Bio.ForeColor = System.Drawing.Color.DarkRed;
-            this.lb_Bio.Location = new System.Drawing.Point(96, 210);
+            this.lb_Bio.Location = new System.Drawing.Point(93, 250);
             this.lb_Bio.Name = "lb_Bio";
-            this.lb_Bio.Size = new System.Drawing.Size(360, 88);
+            this.lb_Bio.Size = new System.Drawing.Size(396, 77);
             this.lb_Bio.TabIndex = 7;
             this.lb_Bio.Text = "...";
             // 
@@ -364,7 +391,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("SVN-Sarifa", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DarkRed;
-            this.label4.Location = new System.Drawing.Point(25, 204);
+            this.label4.Location = new System.Drawing.Point(25, 247);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 43);
             this.label4.TabIndex = 3;
@@ -416,6 +443,7 @@
             this.btn_Right.Size = new System.Drawing.Size(64, 64);
             this.btn_Right.TabIndex = 2;
             this.btn_Right.UseVisualStyleBackColor = false;
+            this.btn_Right.Click += new System.EventHandler(this.btn_Right_Click);
             // 
             // btn_Left
             // 
@@ -430,6 +458,7 @@
             this.btn_Left.Size = new System.Drawing.Size(64, 64);
             this.btn_Left.TabIndex = 3;
             this.btn_Left.UseVisualStyleBackColor = false;
+            this.btn_Left.Click += new System.EventHandler(this.btn_Left_Click);
             // 
             // btn_Male
             // 
@@ -444,6 +473,7 @@
             this.btn_Male.Size = new System.Drawing.Size(64, 64);
             this.btn_Male.TabIndex = 4;
             this.btn_Male.UseVisualStyleBackColor = false;
+            this.btn_Male.Click += new System.EventHandler(this.btn_Male_Click);
             // 
             // btn_Like
             // 
@@ -458,6 +488,8 @@
             this.btn_Like.Size = new System.Drawing.Size(64, 64);
             this.btn_Like.TabIndex = 5;
             this.btn_Like.UseVisualStyleBackColor = false;
+            this.btn_Like.Visible = false;
+            this.btn_Like.Click += new System.EventHandler(this.btn_Like_Click);
             // 
             // btn_Female
             // 
@@ -472,6 +504,7 @@
             this.btn_Female.Size = new System.Drawing.Size(64, 64);
             this.btn_Female.TabIndex = 6;
             this.btn_Female.UseVisualStyleBackColor = false;
+            this.btn_Female.Click += new System.EventHandler(this.btn_Female_Click);
             // 
             // pn_FullInfo
             // 
@@ -488,9 +521,9 @@
             this.pb_Avatar.BackColor = System.Drawing.Color.IndianRed;
             this.pb_Avatar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_Avatar.BackgroundImage")));
             this.pb_Avatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pb_Avatar.Location = new System.Drawing.Point(33, 15);
+            this.pb_Avatar.Location = new System.Drawing.Point(16, 15);
             this.pb_Avatar.Name = "pb_Avatar";
-            this.pb_Avatar.Size = new System.Drawing.Size(475, 350);
+            this.pb_Avatar.Size = new System.Drawing.Size(508, 350);
             this.pb_Avatar.TabIndex = 2;
             this.pb_Avatar.TabStop = false;
             // 
@@ -507,6 +540,7 @@
             this.btn_LikeList.Size = new System.Drawing.Size(64, 64);
             this.btn_LikeList.TabIndex = 8;
             this.btn_LikeList.UseVisualStyleBackColor = false;
+            this.btn_LikeList.Click += new System.EventHandler(this.btn_LikeList_Click);
             // 
             // pn_LikeList
             // 
@@ -516,10 +550,11 @@
             this.pn_LikeList.Controls.Add(this.label6);
             this.pn_LikeList.Controls.Add(this.pn_ylp);
             this.pn_LikeList.Controls.Add(this.pn_ply);
-            this.pn_LikeList.Location = new System.Drawing.Point(725, 80);
+            this.pn_LikeList.Location = new System.Drawing.Point(24, 153);
             this.pn_LikeList.Name = "pn_LikeList";
             this.pn_LikeList.Size = new System.Drawing.Size(658, 673);
             this.pn_LikeList.TabIndex = 9;
+            this.pn_LikeList.Visible = false;
             // 
             // btn_Close
             // 
@@ -552,37 +587,43 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("SVN-Appleberry", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DarkRed;
-            this.label6.Location = new System.Drawing.Point(30, 25);
+            this.label6.Location = new System.Drawing.Point(137, 28);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(300, 44);
+            this.label6.Size = new System.Drawing.Size(96, 44);
             this.label6.TabIndex = 4;
-            this.label6.Text = "Người cũng thích bạn";
+            this.label6.Text = "Match";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // pn_ylp
             // 
-            this.pn_ylp.Controls.Add(this.button1);
+            this.pn_ylp.BackColor = System.Drawing.Color.IndianRed;
+            this.pn_ylp.Controls.Add(this.dgv_ylp);
+            this.pn_ylp.Controls.Add(this.btn_Delete);
             this.pn_ylp.Location = new System.Drawing.Point(344, 72);
             this.pn_ylp.Name = "pn_ylp";
             this.pn_ylp.Size = new System.Drawing.Size(289, 570);
             this.pn_ylp.TabIndex = 3;
             // 
-            // button1
+            // btn_Delete
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSalmon;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSalmon;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(113, 499);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 64);
-            this.button1.TabIndex = 8;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_Delete.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Delete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Delete.BackgroundImage")));
+            this.btn_Delete.FlatAppearance.BorderSize = 0;
+            this.btn_Delete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSalmon;
+            this.btn_Delete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSalmon;
+            this.btn_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Delete.Location = new System.Drawing.Point(113, 499);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(64, 64);
+            this.btn_Delete.TabIndex = 8;
+            this.btn_Delete.UseVisualStyleBackColor = false;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // pn_ply
             // 
             this.pn_ply.AutoScroll = true;
+            this.pn_ply.BackColor = System.Drawing.Color.IndianRed;
+            this.pn_ply.Controls.Add(this.dgv_ply);
             this.pn_ply.Location = new System.Drawing.Point(35, 72);
             this.pn_ply.Name = "pn_ply";
             this.pn_ply.Size = new System.Drawing.Size(289, 570);
@@ -608,60 +649,13 @@
             this.pn_filter.BackColor = System.Drawing.Color.LightCoral;
             this.pn_filter.Controls.Add(this.btn_Find);
             this.pn_filter.Controls.Add(this.txb_Find);
-            this.pn_filter.Controls.Add(this.comboBox1);
+            this.pn_filter.Controls.Add(this.cb_FindWhat);
             this.pn_filter.Controls.Add(this.label11);
-            this.pn_filter.Location = new System.Drawing.Point(725, 778);
+            this.pn_filter.Location = new System.Drawing.Point(81, 778);
             this.pn_filter.Name = "pn_filter";
             this.pn_filter.Size = new System.Drawing.Size(539, 109);
             this.pn_filter.TabIndex = 11;
             this.pn_filter.Visible = false;
-            // 
-            // lb_AppName
-            // 
-            this.lb_AppName.AutoSize = true;
-            this.lb_AppName.BackColor = System.Drawing.Color.Transparent;
-            this.lb_AppName.Font = new System.Drawing.Font("SVN-Appleberry", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_AppName.ForeColor = System.Drawing.Color.DarkRed;
-            this.lb_AppName.Location = new System.Drawing.Point(118, -9);
-            this.lb_AppName.Name = "lb_AppName";
-            this.lb_AppName.Size = new System.Drawing.Size(281, 118);
-            this.lb_AppName.TabIndex = 6;
-            this.lb_AppName.Text = "Sinder";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("SVN-Appleberry", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.DarkRed;
-            this.label11.Location = new System.Drawing.Point(3, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(169, 34);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "Bộ lọc tìm kiếm";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.Linen;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("SVN-Sarifa", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Năm sinh",
-            "Trường",
-            "Sinh viên năm"});
-            this.comboBox1.Location = new System.Drawing.Point(3, 46);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(163, 48);
-            this.comboBox1.TabIndex = 17;
-            // 
-            // txb_Find
-            // 
-            this.txb_Find.BackColor = System.Drawing.Color.Linen;
-            this.txb_Find.Font = new System.Drawing.Font("SVN-Sarifa", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_Find.Location = new System.Drawing.Point(172, 46);
-            this.txb_Find.Name = "txb_Find";
-            this.txb_Find.Size = new System.Drawing.Size(310, 48);
-            this.txb_Find.TabIndex = 18;
             // 
             // btn_Find
             // 
@@ -677,30 +671,184 @@
             this.btn_Find.Size = new System.Drawing.Size(48, 48);
             this.btn_Find.TabIndex = 7;
             this.btn_Find.UseVisualStyleBackColor = false;
+            this.btn_Find.Click += new System.EventHandler(this.btn_Find_Click);
+            // 
+            // txb_Find
+            // 
+            this.txb_Find.BackColor = System.Drawing.Color.Linen;
+            this.txb_Find.Font = new System.Drawing.Font("SVN-Sarifa", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_Find.ForeColor = System.Drawing.Color.DarkRed;
+            this.txb_Find.Location = new System.Drawing.Point(172, 46);
+            this.txb_Find.Name = "txb_Find";
+            this.txb_Find.Size = new System.Drawing.Size(310, 48);
+            this.txb_Find.TabIndex = 18;
+            // 
+            // cb_FindWhat
+            // 
+            this.cb_FindWhat.BackColor = System.Drawing.Color.Linen;
+            this.cb_FindWhat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_FindWhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_FindWhat.Font = new System.Drawing.Font("SVN-Sarifa", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_FindWhat.ForeColor = System.Drawing.Color.DarkRed;
+            this.cb_FindWhat.FormattingEnabled = true;
+            this.cb_FindWhat.Items.AddRange(new object[] {
+            "Năm sinh",
+            "Trường",
+            "Sinh viên năm"});
+            this.cb_FindWhat.Location = new System.Drawing.Point(3, 46);
+            this.cb_FindWhat.Name = "cb_FindWhat";
+            this.cb_FindWhat.Size = new System.Drawing.Size(163, 48);
+            this.cb_FindWhat.TabIndex = 17;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("SVN-Appleberry", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.DarkRed;
+            this.label11.Location = new System.Drawing.Point(3, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(169, 34);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "Bộ lọc tìm kiếm";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("SVN-Sarifa", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.DarkRed;
+            this.label12.Location = new System.Drawing.Point(219, 125);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(52, 31);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "(cm)";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("SVN-Sarifa", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.DarkRed;
+            this.label13.Location = new System.Drawing.Point(445, 125);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(48, 31);
+            this.label13.TabIndex = 17;
+            this.label13.Text = "(kg)";
+            // 
+            // btn_NotLike
+            // 
+            this.btn_NotLike.BackColor = System.Drawing.Color.Transparent;
+            this.btn_NotLike.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_NotLike.BackgroundImage")));
+            this.btn_NotLike.FlatAppearance.BorderSize = 0;
+            this.btn_NotLike.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSalmon;
+            this.btn_NotLike.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSalmon;
+            this.btn_NotLike.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_NotLike.Location = new System.Drawing.Point(316, 893);
+            this.btn_NotLike.Name = "btn_NotLike";
+            this.btn_NotLike.Size = new System.Drawing.Size(64, 64);
+            this.btn_NotLike.TabIndex = 12;
+            this.btn_NotLike.UseVisualStyleBackColor = false;
+            this.btn_NotLike.Click += new System.EventHandler(this.btn_NotLike_Click);
+            // 
+            // dgv_ylp
+            // 
+            this.dgv_ylp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_ylp.BackgroundColor = System.Drawing.Color.LightCoral;
+            this.dgv_ylp.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_ylp.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.IndianRed;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("SVN-Sarifa", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Salmon;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_ylp.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgv_ylp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LightCoral;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("SVN-Sarifa", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Firebrick;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_ylp.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgv_ylp.EnableHeadersVisualStyles = false;
+            this.dgv_ylp.GridColor = System.Drawing.Color.DarkRed;
+            this.dgv_ylp.Location = new System.Drawing.Point(18, 3);
+            this.dgv_ylp.MultiSelect = false;
+            this.dgv_ylp.Name = "dgv_ylp";
+            this.dgv_ylp.ReadOnly = true;
+            this.dgv_ylp.RowHeadersVisible = false;
+            this.dgv_ylp.RowHeadersWidth = 50;
+            this.dgv_ylp.RowTemplate.Height = 30;
+            this.dgv_ylp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_ylp.Size = new System.Drawing.Size(253, 490);
+            this.dgv_ylp.TabIndex = 9;
+            this.dgv_ylp.TabStop = false;
+            this.dgv_ylp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ylp_CellClick);
+            // 
+            // dgv_ply
+            // 
+            this.dgv_ply.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_ply.BackgroundColor = System.Drawing.Color.LightCoral;
+            this.dgv_ply.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_ply.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.IndianRed;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("SVN-Sarifa", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Salmon;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_ply.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgv_ply.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.LightCoral;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("SVN-Sarifa", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Firebrick;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_ply.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgv_ply.EnableHeadersVisualStyles = false;
+            this.dgv_ply.GridColor = System.Drawing.Color.DarkRed;
+            this.dgv_ply.Location = new System.Drawing.Point(15, 3);
+            this.dgv_ply.MultiSelect = false;
+            this.dgv_ply.Name = "dgv_ply";
+            this.dgv_ply.ReadOnly = true;
+            this.dgv_ply.RowHeadersVisible = false;
+            this.dgv_ply.RowHeadersWidth = 50;
+            this.dgv_ply.RowTemplate.Height = 30;
+            this.dgv_ply.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_ply.Size = new System.Drawing.Size(260, 564);
+            this.dgv_ply.TabIndex = 10;
+            this.dgv_ply.TabStop = false;
+            this.dgv_ply.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_ply_CellMouseClick);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
-            this.ClientSize = new System.Drawing.Size(1460, 981);
-            this.Controls.Add(this.pn_filter);
+            this.ClientSize = new System.Drawing.Size(705, 981);
+            this.Controls.Add(this.pn_LikeList);
+            this.Controls.Add(this.btn_NotLike);
             this.Controls.Add(this.pn_Menu);
             this.Controls.Add(this.btn_Filter);
-            this.Controls.Add(this.pn_LikeList);
             this.Controls.Add(this.btn_LikeList);
-            this.Controls.Add(this.pn_FullInfo);
             this.Controls.Add(this.btn_Female);
             this.Controls.Add(this.btn_Like);
             this.Controls.Add(this.btn_Male);
             this.Controls.Add(this.btn_Left);
             this.Controls.Add(this.btn_Right);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pn_filter);
+            this.Controls.Add(this.pn_FullInfo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).EndInit();
@@ -712,8 +860,11 @@
             this.pn_LikeList.ResumeLayout(false);
             this.pn_LikeList.PerformLayout();
             this.pn_ylp.ResumeLayout(false);
+            this.pn_ply.ResumeLayout(false);
             this.pn_filter.ResumeLayout(false);
             this.pn_filter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ylp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ply)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -752,7 +903,7 @@
         private System.Windows.Forms.Panel pn_ylp;
         private System.Windows.Forms.Panel pn_ply;
         private System.Windows.Forms.Button btn_Close;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Delete;
         private System.Windows.Forms.Button btn_Filter;
         private System.Windows.Forms.Label lb_SchoolYear;
         private System.Windows.Forms.Label lb_Weight;
@@ -765,8 +916,13 @@
         private System.Windows.Forms.Label lb_AppName;
         private System.Windows.Forms.Button btn_Find;
         private System.Windows.Forms.TextBox txb_Find;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cb_FindWhat;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btn_NotLike;
+        private System.Windows.Forms.DataGridView dgv_ylp;
+        private System.Windows.Forms.DataGridView dgv_ply;
     }
 }
 

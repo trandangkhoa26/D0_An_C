@@ -13,3 +13,4 @@ C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debu
 C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debug\Đồ_án_cuối_năm.User.resources
 C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debug\Đồ_án_cuối_năm.Messenger.resources
 C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debug\Đồ_án_cuối_năm.History.resources
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debug\Đồ_án_cuối_năm.CheckInfo.resources

@@ -261,7 +261,7 @@
             this.pn_Register.Controls.Add(this.label6);
             this.pn_Register.Controls.Add(this.label5);
             this.pn_Register.Controls.Add(this.label4);
-            this.pn_Register.Location = new System.Drawing.Point(588, 75);
+            this.pn_Register.Location = new System.Drawing.Point(11, 151);
             this.pn_Register.Name = "pn_Register";
             this.pn_Register.Size = new System.Drawing.Size(499, 627);
             this.pn_Register.TabIndex = 23;
@@ -533,7 +533,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
-            this.ClientSize = new System.Drawing.Size(1194, 787);
+            this.ClientSize = new System.Drawing.Size(523, 787);
             this.Controls.Add(this.pn_Register);
             this.Controls.Add(this.btn_Register);
             this.Controls.Add(this.txb_LoginName);

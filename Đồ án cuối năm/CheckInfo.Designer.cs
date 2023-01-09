@@ -31,10 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckInfo));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lb_AppName = new System.Windows.Forms.Label();
-            this.btn_Exit = new System.Windows.Forms.Button();
             this.pb_Logo = new System.Windows.Forms.PictureBox();
+            this.btn_Exit = new System.Windows.Forms.Button();
             this.pb_Avatar = new System.Windows.Forms.PictureBox();
             this.pn_Info = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.lb_SchoolYear = new System.Windows.Forms.Label();
             this.lb_Weight = new System.Windows.Forms.Label();
             this.lb_Height = new System.Windows.Forms.Label();
@@ -51,6 +53,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_NotLike = new System.Windows.Forms.Button();
+            this.btn_Like = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Avatar)).BeginInit();
@@ -79,22 +83,6 @@
             this.lb_AppName.TabIndex = 6;
             this.lb_AppName.Text = "Sinder";
             // 
-            // btn_Exit
-            // 
-            this.btn_Exit.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Exit.BackgroundImage")));
-            this.btn_Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Exit.FlatAppearance.BorderSize = 0;
-            this.btn_Exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSalmon;
-            this.btn_Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSalmon;
-            this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Exit.Location = new System.Drawing.Point(207, 799);
-            this.btn_Exit.Name = "btn_Exit";
-            this.btn_Exit.Size = new System.Drawing.Size(80, 80);
-            this.btn_Exit.TabIndex = 5;
-            this.btn_Exit.UseVisualStyleBackColor = false;
-            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
-            // 
             // pb_Logo
             // 
             this.pb_Logo.BackColor = System.Drawing.Color.Transparent;
@@ -105,6 +93,22 @@
             this.pb_Logo.Size = new System.Drawing.Size(100, 100);
             this.pb_Logo.TabIndex = 1;
             this.pb_Logo.TabStop = false;
+            // 
+            // btn_Exit
+            // 
+            this.btn_Exit.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Exit.BackgroundImage")));
+            this.btn_Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Exit.FlatAppearance.BorderSize = 0;
+            this.btn_Exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSalmon;
+            this.btn_Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSalmon;
+            this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Exit.Location = new System.Drawing.Point(297, 807);
+            this.btn_Exit.Name = "btn_Exit";
+            this.btn_Exit.Size = new System.Drawing.Size(64, 64);
+            this.btn_Exit.TabIndex = 5;
+            this.btn_Exit.UseVisualStyleBackColor = false;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // pb_Avatar
             // 
@@ -120,6 +124,8 @@
             // pn_Info
             // 
             this.pn_Info.BackColor = System.Drawing.Color.Linen;
+            this.pn_Info.Controls.Add(this.label13);
+            this.pn_Info.Controls.Add(this.label12);
             this.pn_Info.Controls.Add(this.lb_SchoolYear);
             this.pn_Info.Controls.Add(this.lb_Weight);
             this.pn_Info.Controls.Add(this.lb_Height);
@@ -136,17 +142,39 @@
             this.pn_Info.Controls.Add(this.label3);
             this.pn_Info.Controls.Add(this.label2);
             this.pn_Info.Controls.Add(this.label1);
-            this.pn_Info.Location = new System.Drawing.Point(29, 478);
+            this.pn_Info.Location = new System.Drawing.Point(15, 472);
             this.pn_Info.Name = "pn_Info";
-            this.pn_Info.Size = new System.Drawing.Size(475, 315);
-            this.pn_Info.TabIndex = 6;
+            this.pn_Info.Size = new System.Drawing.Size(508, 329);
+            this.pn_Info.TabIndex = 8;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("SVN-Sarifa", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.DarkRed;
+            this.label13.Location = new System.Drawing.Point(445, 125);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(48, 31);
+            this.label13.TabIndex = 17;
+            this.label13.Text = "(kg)";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("SVN-Sarifa", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.DarkRed;
+            this.label12.Location = new System.Drawing.Point(219, 125);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(52, 31);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "(cm)";
             // 
             // lb_SchoolYear
             // 
             this.lb_SchoolYear.AutoSize = true;
             this.lb_SchoolYear.Font = new System.Drawing.Font("SVN-Sarifa", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_SchoolYear.ForeColor = System.Drawing.Color.DarkRed;
-            this.lb_SchoolYear.Location = new System.Drawing.Point(373, 161);
+            this.lb_SchoolYear.Location = new System.Drawing.Point(145, 204);
             this.lb_SchoolYear.Name = "lb_SchoolYear";
             this.lb_SchoolYear.Size = new System.Drawing.Size(31, 43);
             this.lb_SchoolYear.TabIndex = 15;
@@ -157,11 +185,11 @@
             this.lb_Weight.AutoSize = true;
             this.lb_Weight.Font = new System.Drawing.Font("SVN-Sarifa", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Weight.ForeColor = System.Drawing.Color.DarkRed;
-            this.lb_Weight.Location = new System.Drawing.Point(390, 115);
+            this.lb_Weight.Location = new System.Drawing.Point(408, 115);
             this.lb_Weight.Name = "lb_Weight";
-            this.lb_Weight.Size = new System.Drawing.Size(31, 43);
+            this.lb_Weight.Size = new System.Drawing.Size(45, 43);
             this.lb_Weight.TabIndex = 14;
-            this.lb_Weight.Text = "...";
+            this.lb_Weight.Text = "99";
             // 
             // lb_Height
             // 
@@ -179,7 +207,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("SVN-Sarifa", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DarkRed;
-            this.label10.Location = new System.Drawing.Point(248, 115);
+            this.label10.Location = new System.Drawing.Point(264, 115);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(138, 43);
             this.label10.TabIndex = 12;
@@ -201,7 +229,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("SVN-Sarifa", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DarkRed;
-            this.label8.Location = new System.Drawing.Point(248, 161);
+            this.label8.Location = new System.Drawing.Point(26, 204);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(119, 43);
             this.label8.TabIndex = 10;
@@ -212,7 +240,7 @@
             this.lb_Gender.AutoSize = true;
             this.lb_Gender.Font = new System.Drawing.Font("SVN-Sarifa", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Gender.ForeColor = System.Drawing.Color.DarkRed;
-            this.lb_Gender.Location = new System.Drawing.Point(379, 62);
+            this.lb_Gender.Location = new System.Drawing.Point(395, 62);
             this.lb_Gender.Name = "lb_Gender";
             this.lb_Gender.Size = new System.Drawing.Size(31, 43);
             this.lb_Gender.TabIndex = 9;
@@ -223,7 +251,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("SVN-Sarifa", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DarkRed;
-            this.label5.Location = new System.Drawing.Point(248, 62);
+            this.label5.Location = new System.Drawing.Point(264, 62);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(125, 43);
             this.label5.TabIndex = 8;
@@ -231,11 +259,11 @@
             // 
             // lb_Bio
             // 
-            this.lb_Bio.Font = new System.Drawing.Font("SVN-Sarifa", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Bio.Font = new System.Drawing.Font("SVN-Sarifa", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Bio.ForeColor = System.Drawing.Color.DarkRed;
-            this.lb_Bio.Location = new System.Drawing.Point(96, 210);
+            this.lb_Bio.Location = new System.Drawing.Point(93, 250);
             this.lb_Bio.Name = "lb_Bio";
-            this.lb_Bio.Size = new System.Drawing.Size(360, 88);
+            this.lb_Bio.Size = new System.Drawing.Size(396, 74);
             this.lb_Bio.TabIndex = 7;
             this.lb_Bio.Text = "...";
             // 
@@ -277,7 +305,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("SVN-Sarifa", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DarkRed;
-            this.label4.Location = new System.Drawing.Point(25, 204);
+            this.label4.Location = new System.Drawing.Point(25, 247);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 43);
             this.label4.TabIndex = 3;
@@ -316,12 +344,45 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên:";
             // 
+            // btn_NotLike
+            // 
+            this.btn_NotLike.BackColor = System.Drawing.Color.Transparent;
+            this.btn_NotLike.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_NotLike.BackgroundImage")));
+            this.btn_NotLike.FlatAppearance.BorderSize = 0;
+            this.btn_NotLike.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSalmon;
+            this.btn_NotLike.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSalmon;
+            this.btn_NotLike.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_NotLike.Location = new System.Drawing.Point(179, 807);
+            this.btn_NotLike.Name = "btn_NotLike";
+            this.btn_NotLike.Size = new System.Drawing.Size(64, 64);
+            this.btn_NotLike.TabIndex = 14;
+            this.btn_NotLike.UseVisualStyleBackColor = false;
+            this.btn_NotLike.Click += new System.EventHandler(this.btn_NotLike_Click);
+            // 
+            // btn_Like
+            // 
+            this.btn_Like.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Like.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Like.BackgroundImage")));
+            this.btn_Like.FlatAppearance.BorderSize = 0;
+            this.btn_Like.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSalmon;
+            this.btn_Like.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSalmon;
+            this.btn_Like.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Like.Location = new System.Drawing.Point(179, 807);
+            this.btn_Like.Name = "btn_Like";
+            this.btn_Like.Size = new System.Drawing.Size(64, 64);
+            this.btn_Like.TabIndex = 13;
+            this.btn_Like.UseVisualStyleBackColor = false;
+            this.btn_Like.Visible = false;
+            this.btn_Like.Click += new System.EventHandler(this.btn_Like_Click);
+            // 
             // CheckInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(539, 886);
+            this.Controls.Add(this.btn_NotLike);
+            this.Controls.Add(this.btn_Like);
             this.Controls.Add(this.pn_Info);
             this.Controls.Add(this.pb_Avatar);
             this.Controls.Add(this.panel1);
@@ -331,6 +392,7 @@
             this.Name = "CheckInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CheckInfo";
+            this.Load += new System.EventHandler(this.CheckInfo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).EndInit();
@@ -349,6 +411,8 @@
         private System.Windows.Forms.PictureBox pb_Logo;
         private System.Windows.Forms.PictureBox pb_Avatar;
         private System.Windows.Forms.Panel pn_Info;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lb_SchoolYear;
         private System.Windows.Forms.Label lb_Weight;
         private System.Windows.Forms.Label lb_Height;
@@ -365,5 +429,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_NotLike;
+        private System.Windows.Forms.Button btn_Like;
     }
 }
