@@ -53,6 +53,9 @@
       <DependentUpon>CheckInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DTO\ACCOUNT_DTO.cs" />
+    <Compile Include="DTO\TINNHAN_DTO.cs" />
+    <Compile Include="DTO\YEUTHICH_DTO.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="History.cs">
       <SubType>Form</SubType>
@@ -126,8 +129,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DTO\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
