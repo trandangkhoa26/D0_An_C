@@ -18,7 +18,7 @@ namespace Đồ_án_cuối_năm.DAO
         }
         private DataProvider() { }
 
-        private string connectionSTR = "Data Source=LAPTOP-6ULCAJN1;Initial Catalog=SINDER;Integrated Security=True";
+        private string connectionSTR = "Data Source=LAPTOP-AAC46LFN\\SQLEXPRESS;Initial Catalog=SINDER;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {

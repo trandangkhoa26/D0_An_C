@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lb_AppName = new System.Windows.Forms.Label();
             this.btn_Exit = new System.Windows.Forms.Button();
@@ -85,7 +85,6 @@
             this.cb_FindWhat = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.btn_NotLike = new System.Windows.Forms.Button();
-            this.btn_Path = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).BeginInit();
             this.pn_Menu.SuspendLayout();
@@ -103,7 +102,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightCoral;
-            this.panel1.Controls.Add(this.btn_Path);
             this.panel1.Controls.Add(this.lb_AppName);
             this.panel1.Controls.Add(this.btn_Exit);
             this.panel1.Controls.Add(this.btn_Menu);
@@ -826,21 +824,6 @@
             this.btn_NotLike.UseVisualStyleBackColor = false;
             this.btn_NotLike.Click += new System.EventHandler(this.btn_NotLike_Click);
             // 
-            // btn_Path
-            // 
-            this.btn_Path.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Path.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Path.BackgroundImage")));
-            this.btn_Path.FlatAppearance.BorderSize = 0;
-            this.btn_Path.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSalmon;
-            this.btn_Path.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSalmon;
-            this.btn_Path.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Path.Location = new System.Drawing.Point(645, 63);
-            this.btn_Path.Name = "btn_Path";
-            this.btn_Path.Size = new System.Drawing.Size(48, 48);
-            this.btn_Path.TabIndex = 7;
-            this.btn_Path.UseVisualStyleBackColor = false;
-            this.btn_Path.Click += new System.EventHandler(this.btn_Path_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -940,7 +923,6 @@
         private System.Windows.Forms.Button btn_NotLike;
         private System.Windows.Forms.DataGridView dgv_ylp;
         private System.Windows.Forms.DataGridView dgv_ply;
-        private System.Windows.Forms.Button btn_Path;
     }
 }
 

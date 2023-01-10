@@ -29,25 +29,38 @@ namespace Đồ_án_cuối_năm.DAO
             return list;
         }
         
-        public void AddTinNhanText(int nguoigui,string noidung,string nguoinhan)
+        public void AddTinNhanText(int nguoigui,string noidung,int nguoinhan)
         {
             string query = string.Format("AddNoiDung {0},N'{1}',{2} ", nguoigui, noidung, nguoinhan);
             DataProvider.Instance.ExecuteQuery(query);
         }
-        public void AddNhanDan(int nguoigui, int nhandan, string nguoinhan)
+        public void AddNhanDan(int nguoigui, int nhandan, int nguoinhan)
         {
             string query = string.Format("AddNhanDan {0},{1},{2} ", nguoigui, nhandan, nguoinhan);
             DataProvider.Instance.ExecuteQuery(query);
         }
-        public void AddAnh(int nguoigui, string anh, string nguoinhan)
+        public void AddAnh(int nguoigui, string anh, int nguoinhan)
         {
             string query = string.Format("AddAnh {0},'{1}',{2} ", nguoigui, anh, nguoinhan);
             DataProvider.Instance.ExecuteQuery(query);
         }
-        public void AddFile(int nguoigui, string file, string nguoinhan)
+        public void AddFile(int nguoigui, string file, int nguoinhan)
         {
             string query = string.Format("AddFile {0},'{1}',{2} ", nguoigui, file, nguoinhan);
             DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public List<TINNHAN_DTO> LoadMessage(int user, int opponent)
+        {
+            List<TINNHAN_DTO> result = new List<TINNHAN_DTO>();
+            string query = "select * from TINNHAN where (NguoiGoi = " + user + " and NguoiNhan = " + opponent +") or (NguoiGoi = " + opponent + " and NguoiNhan = " + user +")";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                TINNHAN_DTO tinnhan = new TINNHAN_DTO(item);
+                result.Add(tinnhan);
+            }
+            return result;
         }
     }
 }
