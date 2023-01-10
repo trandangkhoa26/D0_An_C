@@ -120,6 +120,7 @@
             this.btn_Send.Size = new System.Drawing.Size(64, 64);
             this.btn_Send.TabIndex = 4;
             this.btn_Send.UseVisualStyleBackColor = false;
+            this.btn_Send.Click += new System.EventHandler(this.btn_Send_Click);
             // 
             // btn_Picture
             // 
@@ -165,6 +166,7 @@
             // 
             // pn_Chat
             // 
+            this.pn_Chat.AutoScroll = true;
             this.pn_Chat.Location = new System.Drawing.Point(39, 184);
             this.pn_Chat.Name = "pn_Chat";
             this.pn_Chat.Size = new System.Drawing.Size(625, 569);

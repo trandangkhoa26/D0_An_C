@@ -14,3 +14,14 @@ C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debu
 C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debug\Đồ_án_cuối_năm.Messenger.resources
 C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debug\Đồ_án_cuối_năm.History.resources
 C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debug\Đồ_án_cuối_năm.CheckInfo.resources
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debug\Đồ_án_cuối_năm.Incomming.resources
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debug\Đồ án cuối năm.exe.licenses
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debug\Đồ_án_cuối_năm.Outgoing.resources
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.dll
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.dll
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\bin\Debug\Bunifu.Licensing.dll
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.xml
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.xml
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debug\Đồ án cuối năm.csproj.CopyComplete
