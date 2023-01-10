@@ -43,8 +43,8 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.bunifuUserControl1.AnimationSpeed = 200;
             this.bunifuUserControl1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuUserControl1.BackgroundColor = System.Drawing.Color.Blue;
-            this.bunifuUserControl1.BorderColor = System.Drawing.Color.Blue;
+            this.bunifuUserControl1.BackgroundColor = System.Drawing.Color.Tomato;
+            this.bunifuUserControl1.BorderColor = System.Drawing.Color.Maroon;
             this.bunifuUserControl1.BorderRadius = 30;
             this.bunifuUserControl1.BorderStyle = Bunifu.UI.WinForms.BunifuUserControl.BorderStyles.Solid;
             this.bunifuUserControl1.BorderThickness = 1;
@@ -63,13 +63,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Blue;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.BackColor = System.Drawing.Color.Tomato;
+            this.label1.Font = new System.Drawing.Font("SVN-Sarifa", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkRed;
             this.label1.Location = new System.Drawing.Point(85, 10);
             this.label1.MaximumSize = new System.Drawing.Size(332, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 17);
+            this.label1.Size = new System.Drawing.Size(47, 24);
             this.label1.TabIndex = 2;
             this.label1.Text = "label1";
             // 

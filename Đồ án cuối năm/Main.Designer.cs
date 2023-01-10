@@ -609,7 +609,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("SVN-Appleberry", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DarkRed;
-            this.label6.Location = new System.Drawing.Point(137, 28);
+            this.label6.Location = new System.Drawing.Point(122, 25);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(96, 44);
             this.label6.TabIndex = 4;
@@ -646,7 +646,7 @@
             dataGridViewCellStyle2.Font = new System.Drawing.Font("SVN-Sarifa", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkRed;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Firebrick;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.MistyRose;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_ylp.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_ylp.EnableHeadersVisualStyles = false;
@@ -709,7 +709,7 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("SVN-Sarifa", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DarkRed;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Firebrick;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.MistyRose;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_ply.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_ply.EnableHeadersVisualStyles = false;

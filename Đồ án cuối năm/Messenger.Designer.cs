@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Messenger));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lb_AppName = new System.Windows.Forms.Label();
@@ -37,13 +38,17 @@
             this.btn_Send = new System.Windows.Forms.Button();
             this.btn_Picture = new System.Windows.Forms.Button();
             this.btn_File = new System.Windows.Forms.Button();
-            this.btn_Icon = new System.Windows.Forms.Button();
+            this.btn_Sticker = new System.Windows.Forms.Button();
             this.pn_Chat = new System.Windows.Forms.Panel();
             this.lb_Name = new System.Windows.Forms.Label();
             this.pb_AvaReciver = new System.Windows.Forms.PictureBox();
+            this.pn_Sticker = new System.Windows.Forms.Panel();
+            this.lv_Sticker = new System.Windows.Forms.ListView();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_AvaReciver)).BeginInit();
+            this.pn_Sticker.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -135,6 +140,7 @@
             this.btn_Picture.Size = new System.Drawing.Size(48, 48);
             this.btn_Picture.TabIndex = 7;
             this.btn_Picture.UseVisualStyleBackColor = false;
+            this.btn_Picture.Click += new System.EventHandler(this.btn_Picture_Click);
             // 
             // btn_File
             // 
@@ -149,20 +155,22 @@
             this.btn_File.Size = new System.Drawing.Size(48, 48);
             this.btn_File.TabIndex = 8;
             this.btn_File.UseVisualStyleBackColor = false;
+            this.btn_File.Click += new System.EventHandler(this.btn_File_Click);
             // 
-            // btn_Icon
+            // btn_Sticker
             // 
-            this.btn_Icon.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Icon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Icon.BackgroundImage")));
-            this.btn_Icon.FlatAppearance.BorderSize = 0;
-            this.btn_Icon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSalmon;
-            this.btn_Icon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSalmon;
-            this.btn_Icon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Icon.Location = new System.Drawing.Point(438, 847);
-            this.btn_Icon.Name = "btn_Icon";
-            this.btn_Icon.Size = new System.Drawing.Size(48, 48);
-            this.btn_Icon.TabIndex = 9;
-            this.btn_Icon.UseVisualStyleBackColor = false;
+            this.btn_Sticker.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Sticker.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Sticker.BackgroundImage")));
+            this.btn_Sticker.FlatAppearance.BorderSize = 0;
+            this.btn_Sticker.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSalmon;
+            this.btn_Sticker.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSalmon;
+            this.btn_Sticker.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Sticker.Location = new System.Drawing.Point(438, 847);
+            this.btn_Sticker.Name = "btn_Sticker";
+            this.btn_Sticker.Size = new System.Drawing.Size(48, 48);
+            this.btn_Sticker.TabIndex = 9;
+            this.btn_Sticker.UseVisualStyleBackColor = false;
+            this.btn_Sticker.Click += new System.EventHandler(this.btn_Sticker_Click);
             // 
             // pn_Chat
             // 
@@ -192,16 +200,70 @@
             this.pb_AvaReciver.TabIndex = 12;
             this.pb_AvaReciver.TabStop = false;
             // 
+            // pn_Sticker
+            // 
+            this.pn_Sticker.BackColor = System.Drawing.Color.LightCoral;
+            this.pn_Sticker.Controls.Add(this.lv_Sticker);
+            this.pn_Sticker.Location = new System.Drawing.Point(42, 472);
+            this.pn_Sticker.Name = "pn_Sticker";
+            this.pn_Sticker.Size = new System.Drawing.Size(390, 423);
+            this.pn_Sticker.TabIndex = 13;
+            this.pn_Sticker.Visible = false;
+            // 
+            // lv_Sticker
+            // 
+            this.lv_Sticker.BackColor = System.Drawing.Color.LightCoral;
+            this.lv_Sticker.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lv_Sticker.HideSelection = false;
+            this.lv_Sticker.LargeImageList = this.imageList1;
+            this.lv_Sticker.Location = new System.Drawing.Point(4, 4);
+            this.lv_Sticker.MultiSelect = false;
+            this.lv_Sticker.Name = "lv_Sticker";
+            this.lv_Sticker.Size = new System.Drawing.Size(383, 405);
+            this.lv_Sticker.TabIndex = 0;
+            this.lv_Sticker.UseCompatibleStateImageBehavior = false;
+            this.lv_Sticker.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lv_Sticker_MouseClick);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "1.png");
+            this.imageList1.Images.SetKeyName(1, "2.png");
+            this.imageList1.Images.SetKeyName(2, "3.png");
+            this.imageList1.Images.SetKeyName(3, "4.png");
+            this.imageList1.Images.SetKeyName(4, "5.png");
+            this.imageList1.Images.SetKeyName(5, "6.png");
+            this.imageList1.Images.SetKeyName(6, "7.png");
+            this.imageList1.Images.SetKeyName(7, "8.png");
+            this.imageList1.Images.SetKeyName(8, "9.png");
+            this.imageList1.Images.SetKeyName(9, "10.png");
+            this.imageList1.Images.SetKeyName(10, "11.png");
+            this.imageList1.Images.SetKeyName(11, "12.png");
+            this.imageList1.Images.SetKeyName(12, "13.png");
+            this.imageList1.Images.SetKeyName(13, "14.png");
+            this.imageList1.Images.SetKeyName(14, "15.png");
+            this.imageList1.Images.SetKeyName(15, "16.png");
+            this.imageList1.Images.SetKeyName(16, "17.png");
+            this.imageList1.Images.SetKeyName(17, "18.png");
+            this.imageList1.Images.SetKeyName(18, "19.png");
+            this.imageList1.Images.SetKeyName(19, "20.png");
+            this.imageList1.Images.SetKeyName(20, "21.png");
+            this.imageList1.Images.SetKeyName(21, "22.png");
+            this.imageList1.Images.SetKeyName(22, "23.png");
+            this.imageList1.Images.SetKeyName(23, "24.png");
+            // 
             // Messenger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(705, 918);
+            this.Controls.Add(this.pn_Sticker);
             this.Controls.Add(this.pb_AvaReciver);
             this.Controls.Add(this.lb_Name);
             this.Controls.Add(this.pn_Chat);
-            this.Controls.Add(this.btn_Icon);
+            this.Controls.Add(this.btn_Sticker);
             this.Controls.Add(this.btn_File);
             this.Controls.Add(this.btn_Picture);
             this.Controls.Add(this.btn_Send);
@@ -217,6 +279,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_AvaReciver)).EndInit();
+            this.pn_Sticker.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,10 +294,13 @@
         private System.Windows.Forms.Button btn_Send;
         private System.Windows.Forms.Button btn_Picture;
         private System.Windows.Forms.Button btn_File;
-        private System.Windows.Forms.Button btn_Icon;
+        private System.Windows.Forms.Button btn_Sticker;
         private System.Windows.Forms.Panel pn_Chat;
         private System.Windows.Forms.Label lb_Name;
         private System.Windows.Forms.PictureBox pb_AvaReciver;
         private System.Windows.Forms.Label lb_AppName;
+        private System.Windows.Forms.Panel pn_Sticker;
+        private System.Windows.Forms.ListView lv_Sticker;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
