@@ -17,7 +17,7 @@ namespace Đồ_án_cuối_năm
             InitializeComponent();
         }
 
-        public Image Sticker
+        public Image Stick
         {
             get { return pictureBox1.BackgroundImage; }
             set { pictureBox1.BackgroundImage = value; }

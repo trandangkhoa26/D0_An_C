@@ -31,15 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(History));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lb_AppName = new System.Windows.Forms.Label();
-            this.btn_Exit = new System.Windows.Forms.Button();
-            this.pb_Logo = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.pn_History = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_Exit = new System.Windows.Forms.Button();
+            this.pb_Logo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).BeginInit();
             this.pn_History.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -64,6 +64,49 @@
             this.lb_AppName.Size = new System.Drawing.Size(281, 118);
             this.lb_AppName.TabIndex = 7;
             this.lb_AppName.Text = "Sinder";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("SVN-Appleberry", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.DarkRed;
+            this.label9.Location = new System.Drawing.Point(12, 135);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(232, 44);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Lịch sử tin nhắn";
+            // 
+            // pn_History
+            // 
+            this.pn_History.BackColor = System.Drawing.Color.LightCoral;
+            this.pn_History.Controls.Add(this.label2);
+            this.pn_History.Controls.Add(this.label1);
+            this.pn_History.Location = new System.Drawing.Point(44, 205);
+            this.pn_History.Name = "pn_History";
+            this.pn_History.Size = new System.Drawing.Size(606, 670);
+            this.pn_History.TabIndex = 7;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("SVN-Appleberry", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkRed;
+            this.label2.Location = new System.Drawing.Point(323, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(280, 44);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "lần cuối trò chuyện";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("SVN-Appleberry", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkRed;
+            this.label1.Location = new System.Drawing.Point(18, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(267, 44);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "tên người đc nhắn";
             // 
             // btn_Exit
             // 
@@ -91,49 +134,6 @@
             this.pb_Logo.TabIndex = 1;
             this.pb_Logo.TabStop = false;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("SVN-Appleberry", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.DarkRed;
-            this.label9.Location = new System.Drawing.Point(12, 135);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(232, 44);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Lịch sử tin nhắn";
-            // 
-            // pn_History
-            // 
-            this.pn_History.BackColor = System.Drawing.Color.LightCoral;
-            this.pn_History.Controls.Add(this.label2);
-            this.pn_History.Controls.Add(this.label1);
-            this.pn_History.Location = new System.Drawing.Point(44, 205);
-            this.pn_History.Name = "pn_History";
-            this.pn_History.Size = new System.Drawing.Size(606, 670);
-            this.pn_History.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("SVN-Appleberry", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkRed;
-            this.label1.Location = new System.Drawing.Point(18, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(267, 44);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "tên người đc nhắn";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("SVN-Appleberry", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkRed;
-            this.label2.Location = new System.Drawing.Point(323, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(280, 44);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "lần cuối trò chuyện";
-            // 
             // History
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,9 +151,9 @@
             this.Text = "History";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).EndInit();
             this.pn_History.ResumeLayout(false);
             this.pn_History.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

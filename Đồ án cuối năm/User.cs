@@ -52,15 +52,18 @@ namespace Đồ_án_cuối_năm
         }
         private void LoadAva()
         {
-            if (!File.Exists(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\" + thisAccount.id.ToString() + ".jpg"))
+            if (!File.Exists(@"C:\Users\phung\source\repos\D0_An_C\img\" + thisAccount.id.ToString() + ".jpg"))
+            //if (!File.Exists(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\" + thisAccount.id.ToString() + ".jpg"))
             {
-                Image image = Image.FromFile(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\other.png");
+                // Image image = Image.FromFile(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\other.png");
+                Image image = Image.FromFile(@"C:\Users\phung\source\repos\D0_An_C\img\other.png");
                 pb_Avatar.BackgroundImage = image;
             }
             else
             {
 
-                Image image = Image.FromFile(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\" + thisAccount.id.ToString() + ".jpg");
+                //Image image = Image.FromFile(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\" + thisAccount.id.ToString() + ".jpg");
+                Image image = Image.FromFile(@"C:\Users\phung\source\repos\D0_An_C\img\" + thisAccount.id.ToString() + ".jpg");
                 pb_Avatar.BackgroundImage = image;
             }
         }
@@ -89,15 +92,17 @@ namespace Đồ_án_cuối_năm
         {
             pn_ChangeAva.Visible = true;
             pn_ChangeInfo.Visible = false;
-            pn_ChangePass.Visible = false;
-            if (!File.Exists(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\" + thisAccount.id.ToString() + ".jpg"))
+            if (!File.Exists(@"C:\Users\phung\source\repos\D0_An_C\img\" + thisAccount.id.ToString() + ".jpg"))
+            //if (!File.Exists(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\" + thisAccount.id.ToString() + ".jpg"))
             {
-                Image image = Image.FromFile(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\other.png");
+                // Image image = Image.FromFile(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\other.png");
+                Image image = Image.FromFile(@"C:\Users\phung\source\repos\D0_An_C\img\other.png");
                 pb_ChangeAva.BackgroundImage = image;
             }
             else
             {
-                Image image = Image.FromFile(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\" + thisAccount.id.ToString() + ".jpg");
+                //Image image = Image.FromFile(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\" + thisAccount.id.ToString() + ".jpg");
+                Image image = Image.FromFile(@"C:\Users\phung\source\repos\D0_An_C\img\" + thisAccount.id.ToString() + ".jpg");
                 pb_ChangeAva.BackgroundImage = image;
             }
 

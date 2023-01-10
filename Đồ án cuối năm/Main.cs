@@ -289,16 +289,17 @@ namespace Đồ_án_cuối_năm
 
        private void LoadAva()
         {
-            if (!File.Exists(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\" + list[index].id.ToString() + ".jpg"))
+            if (!File.Exists(@"C:\Users\phung\source\repos\D0_An_C\img\" + list[index].id.ToString() + ".jpg"))
+            //if (!File.Exists(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\" + list[index].id.ToString() + ".jpg"))
             {
-                Image image = Image.FromFile(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\other.png");
-                //Image image = Image.FromFile(@"C:\Users\phung\source\repos\D0_An_C\img\" + list[index].id.ToString() + ".jpg");
+                //Image image = Image.FromFile(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\other.png");
+                Image image = Image.FromFile(@"C:\Users\phung\source\repos\D0_An_C\img\" + list[index].id.ToString() + ".jpg");
                 pb_Avatar.BackgroundImage = image; 
             }
             else
             {
-                Image image = Image.FromFile(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\" + list[index].id.ToString() + ".jpg");
-                //Image image = Image.FromFile(@"C:\Users\phung\source\repos\D0_An_C\img\" + list[index].id.ToString() + ".jpg");
+                //Image image = Image.FromFile(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\" + list[index].id.ToString() + ".jpg");
+                Image image = Image.FromFile(@"C:\Users\phung\source\repos\D0_An_C\img\" + list[index].id.ToString() + ".jpg");
                 pb_Avatar.BackgroundImage = image;
             }
         }

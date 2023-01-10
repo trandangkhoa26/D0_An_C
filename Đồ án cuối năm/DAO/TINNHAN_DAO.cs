@@ -34,7 +34,7 @@ namespace Đồ_án_cuối_năm.DAO
             string query = string.Format("AddNoiDung {0},N'{1}',{2} ", nguoigui, noidung, nguoinhan);
             DataProvider.Instance.ExecuteQuery(query);
         }
-        public void AddNhanDan(int nguoigui, int nhandan, int nguoinhan)
+        public void AddNhanDan(int nguoigui, string nhandan, int nguoinhan)
         {
             string query = string.Format("AddNhanDan {0},{1},{2} ", nguoigui, nhandan, nguoinhan);
             DataProvider.Instance.ExecuteQuery(query);
@@ -62,5 +62,28 @@ namespace Đồ_án_cuối_năm.DAO
             }
             return result;
         }
+
+        public DateTime GetLastMessageById(int NguoiGui, int NguoiNhan)
+        {
+            DateTime result;
+            string query = "select MAX(thoigian) as 'Latest' from TINNHAN where (NguoiGoi = " + NguoiGui + " and NguoiNhan = "+ NguoiNhan + ") or(NguoiNhan = " + NguoiGui +" and NguoiGoi = " + NguoiNhan + ")";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            result = Convert.ToDateTime(data.Rows[0]["Latest"]);
+            return result;
+        }
+
+        public List<int> LichSuNhan(int User)
+        {
+            List<int> list = new List<int>();
+
+            string query = "select distinct NguoiGoi from TINNHAN where nguoinhan = 17 or nguoigoi = " + User.ToString();
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow row in data.Rows)
+            {
+                list.Add(Convert.ToInt32(row["NguoiGoi"]));
+            }
+            return list;
+        }
+  
     }
 }

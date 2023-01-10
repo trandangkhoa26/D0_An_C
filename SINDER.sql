@@ -216,3 +216,4 @@ insert into TINNHAN values (@nguoigui, @nguoinhan, '', -1, '', @file, 0)
 end
 
 
+select * from TINNHAN where (NguoiGoi = 17  and NguoiNhan = 1) or (NguoiGoi = 1 and NguoiNhan = 17)

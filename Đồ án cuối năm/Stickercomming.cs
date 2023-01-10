@@ -17,10 +17,16 @@ namespace Đồ_án_cuối_năm
             InitializeComponent();
         }
 
-        public Image Sticker
+        public Image Stick
         {
             get { return pictureBox1.BackgroundImage; }
             set { pictureBox1.BackgroundImage = value; }
+        }
+
+        public Image Avatar
+        {
+            get { return bunifuPictureBox1.Image; }
+            set { bunifuPictureBox1.Image = value; }
         }
     }
 }

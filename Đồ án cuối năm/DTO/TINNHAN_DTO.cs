@@ -16,7 +16,7 @@ namespace Đồ_án_cuối_năm.DTO
         private int NhanDan;
         private string DiaChiAnh;
         private string DiaChiFile;
-        private int DaDoc;
+        private DateTime ThoiGian;
 
         public int id { get=>Id; set=>Id=value; }
         public int nguoigoi { get=>NguoiGoi;set=>NguoiGoi=value; }
@@ -25,9 +25,9 @@ namespace Đồ_án_cuối_năm.DTO
         public int nhandann { get => NhanDan; set => NhanDan = value; }
         public string diachianh { get => DiaChiAnh; set => DiaChiAnh = value; }
         public string diachifile { get => DiaChiFile; set => DiaChiFile = value; }
-        public int dadoc { get=>DaDoc; set=>DaDoc=value; }
+        public DateTime thoigian { get=>ThoiGian; set=>ThoiGian=value; }
 
-        public TINNHAN_DTO(int id,int nggoi,int ngnhan,string noidung,int nhandan,string diachianh,string diachifile,int dadoc) 
+        public TINNHAN_DTO(int id,int nggoi,int ngnhan,string noidung,int nhandan,string diachianh,string diachifile,DateTime tg) 
         {
             this.id = id;
             this.nguoigoi= nggoi;   
@@ -36,7 +36,7 @@ namespace Đồ_án_cuối_năm.DTO
             this.nhandann= nhandan; 
             this.diachianh= diachianh;  
             this.diachifile= diachifile;
-            this.dadoc= dadoc;
+            this.thoigian= tg;
         }    
 
         public TINNHAN_DTO(DataRow rows) 
@@ -48,7 +48,7 @@ namespace Đồ_án_cuối_năm.DTO
             this.nhandann = (int)rows["NhanDan"];
             this.diachianh = (string)rows["DiaChiAnh"];
             this.diachifile = (string)rows["DiaChiFile"];
-            this.dadoc = (int)rows["DaDoc"];
+            this.thoigian = (DateTime)rows["ThoiGian"];
         }
     }
 }

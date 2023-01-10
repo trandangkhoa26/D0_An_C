@@ -68,12 +68,36 @@
     <Compile Include="DTO\ACCOUNT_DTO.cs" />
     <Compile Include="DTO\TINNHAN_DTO.cs" />
     <Compile Include="DTO\YEUTHICH_DTO.cs" />
+    <Compile Include="Filecomming.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Filecomming.Designer.cs">
+      <DependentUpon>Filecomming.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Filegoing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Filegoing.Designer.cs">
+      <DependentUpon>Filegoing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="History.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="History.Designer.cs">
       <DependentUpon>History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imagecomming.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Imagecomming.Designer.cs">
+      <DependentUpon>Imagecomming.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imagegoing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Imagegoing.Designer.cs">
+      <DependentUpon>Imagegoing.cs</DependentUpon>
     </Compile>
     <Compile Include="Incomming.cs">
       <SubType>UserControl</SubType>
@@ -133,8 +157,20 @@
     <EmbeddedResource Include="CheckInfo.resx">
       <DependentUpon>CheckInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Filecomming.resx">
+      <DependentUpon>Filecomming.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Filegoing.resx">
+      <DependentUpon>Filegoing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="History.resx">
       <DependentUpon>History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imagecomming.resx">
+      <DependentUpon>Imagecomming.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imagegoing.resx">
+      <DependentUpon>Imagegoing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Incomming.resx">
       <DependentUpon>Incomming.cs</DependentUpon>
