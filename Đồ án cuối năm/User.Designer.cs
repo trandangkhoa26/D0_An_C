@@ -38,6 +38,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lb_Name = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.lb_SchoolYear = new System.Windows.Forms.Label();
             this.lb_Weight = new System.Windows.Forms.Label();
             this.lb_Height = new System.Windows.Forms.Label();
@@ -91,8 +93,6 @@
             this.btn_NoAva = new System.Windows.Forms.Button();
             this.btn_YesAva = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Avatar)).BeginInit();
@@ -229,6 +229,28 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(613, 362);
             this.panel2.TabIndex = 5;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("SVN-Sarifa", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.DarkRed;
+            this.label22.Location = new System.Drawing.Point(517, 85);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(71, 47);
+            this.label22.TabIndex = 33;
+            this.label22.Text = "(kg)";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("SVN-Sarifa", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.DarkRed;
+            this.label17.Location = new System.Drawing.Point(248, 85);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(77, 47);
+            this.label17.TabIndex = 32;
+            this.label17.Text = "(cm)";
             // 
             // lb_SchoolYear
             // 
@@ -469,7 +491,7 @@
             this.pn_ChangeInfo.Controls.Add(this.txb_ChangeName);
             this.pn_ChangeInfo.Controls.Add(this.label9);
             this.pn_ChangeInfo.Controls.Add(this.label12);
-            this.pn_ChangeInfo.Location = new System.Drawing.Point(97, 125);
+            this.pn_ChangeInfo.Location = new System.Drawing.Point(91, 125);
             this.pn_ChangeInfo.Name = "pn_ChangeInfo";
             this.pn_ChangeInfo.Size = new System.Drawing.Size(518, 703);
             this.pn_ChangeInfo.TabIndex = 24;
@@ -829,7 +851,7 @@
             this.pn_ChangeAva.Controls.Add(this.btn_NoAva);
             this.pn_ChangeAva.Controls.Add(this.btn_YesAva);
             this.pn_ChangeAva.Controls.Add(this.label18);
-            this.pn_ChangeAva.Location = new System.Drawing.Point(94, 132);
+            this.pn_ChangeAva.Location = new System.Drawing.Point(91, 149);
             this.pn_ChangeAva.Name = "pn_ChangeAva";
             this.pn_ChangeAva.Size = new System.Drawing.Size(518, 395);
             this.pn_ChangeAva.TabIndex = 25;
@@ -913,28 +935,6 @@
             this.label18.Size = new System.Drawing.Size(244, 44);
             this.label18.TabIndex = 5;
             this.label18.Text = "ĐỔI HÌNH ĐẠI DIỆN";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("SVN-Sarifa", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.DarkRed;
-            this.label17.Location = new System.Drawing.Point(248, 85);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(77, 47);
-            this.label17.TabIndex = 32;
-            this.label17.Text = "(cm)";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("SVN-Sarifa", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.DarkRed;
-            this.label22.Location = new System.Drawing.Point(517, 85);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(71, 47);
-            this.label22.TabIndex = 33;
-            this.label22.Text = "(kg)";
             // 
             // User
             // 

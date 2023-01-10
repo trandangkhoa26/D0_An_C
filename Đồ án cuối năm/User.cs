@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Windows.Forms.VisualStyles;
 
 
 namespace Đồ_án_cuối_năm
@@ -58,6 +59,7 @@ namespace Đồ_án_cuối_năm
             }
             else
             {
+
                 Image image = Image.FromFile(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\" + thisAccount.id.ToString() + ".jpg");
                 pb_Avatar.BackgroundImage = image;
             }
@@ -98,6 +100,7 @@ namespace Đồ_án_cuối_năm
                 Image image = Image.FromFile(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\" + thisAccount.id.ToString() + ".jpg");
                 pb_ChangeAva.BackgroundImage = image;
             }
+
         }
 
         private void btn_ChangeInfo_Click(object sender, EventArgs e)
@@ -184,15 +187,13 @@ namespace Đồ_án_cuối_năm
         string file;
         private void btn_YesAva_Click(object sender, EventArgs e)
         {
-            string des = string.Format(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\" + thisAccount.id + ".jpg");
-            pb_Avatar.BackgroundImage.Dispose(); 
-
-            Image image = Image.FromFile(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\other.png");
-            pb_Avatar.BackgroundImage = image;
-
-            System.IO.File.Copy(file, des,true);
-            MessageBox.Show("Bạn đã thay đổi ảnh đại diện thành công!", "THAY ĐỔI", MessageBoxButtons.OK);
+            string des = @"C:\Users\netpr\source\repos\Đồ án cuối năm\img\"+ thisAccount.id.ToString()+ ".jpg";
+            if(!File.Exists(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\" + thisAccount.id.ToString() + ".jpg"))
+            {
+                File.Copy(file, des);
+            }
             LoadAva();
+            MessageBox.Show("Bạn đã thay đổi ảnh đại diện thành công!", "THAY ĐỔI", MessageBoxButtons.OK);
             pn_ChangeAva.Visible = false;
         }
 
@@ -208,8 +209,8 @@ namespace Đồ_án_cuối_năm
             if (ava.ShowDialog() == DialogResult.OK)
             {
                 file = ava.FileName;
-                Image image = Image.FromFile(file);
-                pb_ChangeAva.BackgroundImage = image;
+                Console.WriteLine(file);
+                pb_ChangeAva.BackgroundImage = Image.FromFile(file);
 
             }
             

@@ -343,5 +343,17 @@ namespace Đồ_án_cuối_năm
                 this.Show();
             }
         }
+
+        private void btn_Path_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ava = new OpenFileDialog()
+            {
+                FileName = "",
+                Filter = "All files (*.*)|*.*",
+                Title = "Kho ảnh",
+                Multiselect = false
+            };
+           Console.WriteLine(ava);
+        }
     }
 }

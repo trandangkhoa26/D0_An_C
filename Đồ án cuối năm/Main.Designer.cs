@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lb_AppName = new System.Windows.Forms.Label();
             this.btn_Exit = new System.Windows.Forms.Button();
@@ -43,6 +43,8 @@
             this.btn_LogOut = new System.Windows.Forms.Button();
             this.btn_User = new System.Windows.Forms.Button();
             this.pn_Info = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.lb_SchoolYear = new System.Windows.Forms.Label();
             this.lb_Weight = new System.Windows.Forms.Label();
             this.lb_Height = new System.Windows.Forms.Label();
@@ -72,19 +74,18 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pn_ylp = new System.Windows.Forms.Panel();
+            this.dgv_ylp = new System.Windows.Forms.DataGridView();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.pn_ply = new System.Windows.Forms.Panel();
+            this.dgv_ply = new System.Windows.Forms.DataGridView();
             this.btn_Filter = new System.Windows.Forms.Button();
             this.pn_filter = new System.Windows.Forms.Panel();
             this.btn_Find = new System.Windows.Forms.Button();
             this.txb_Find = new System.Windows.Forms.TextBox();
             this.cb_FindWhat = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.btn_NotLike = new System.Windows.Forms.Button();
-            this.dgv_ylp = new System.Windows.Forms.DataGridView();
-            this.dgv_ply = new System.Windows.Forms.DataGridView();
+            this.btn_Path = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).BeginInit();
             this.pn_Menu.SuspendLayout();
@@ -93,15 +94,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_Avatar)).BeginInit();
             this.pn_LikeList.SuspendLayout();
             this.pn_ylp.SuspendLayout();
-            this.pn_ply.SuspendLayout();
-            this.pn_filter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ylp)).BeginInit();
+            this.pn_ply.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ply)).BeginInit();
+            this.pn_filter.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightCoral;
+            this.panel1.Controls.Add(this.btn_Path);
             this.panel1.Controls.Add(this.lb_AppName);
             this.panel1.Controls.Add(this.btn_Exit);
             this.panel1.Controls.Add(this.btn_Menu);
@@ -254,6 +256,28 @@
             this.pn_Info.Name = "pn_Info";
             this.pn_Info.Size = new System.Drawing.Size(508, 337);
             this.pn_Info.TabIndex = 1;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("SVN-Sarifa", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.DarkRed;
+            this.label13.Location = new System.Drawing.Point(445, 125);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(48, 31);
+            this.label13.TabIndex = 17;
+            this.label13.Text = "(kg)";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("SVN-Sarifa", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.DarkRed;
+            this.label12.Location = new System.Drawing.Point(219, 125);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(52, 31);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "(cm)";
             // 
             // lb_SchoolYear
             // 
@@ -604,6 +628,44 @@
             this.pn_ylp.Size = new System.Drawing.Size(289, 570);
             this.pn_ylp.TabIndex = 3;
             // 
+            // dgv_ylp
+            // 
+            this.dgv_ylp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_ylp.BackgroundColor = System.Drawing.Color.LightCoral;
+            this.dgv_ylp.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_ylp.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.IndianRed;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("SVN-Sarifa", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Salmon;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_ylp.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_ylp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightCoral;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("SVN-Sarifa", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Firebrick;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_ylp.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_ylp.EnableHeadersVisualStyles = false;
+            this.dgv_ylp.GridColor = System.Drawing.Color.DarkRed;
+            this.dgv_ylp.Location = new System.Drawing.Point(18, 3);
+            this.dgv_ylp.MultiSelect = false;
+            this.dgv_ylp.Name = "dgv_ylp";
+            this.dgv_ylp.ReadOnly = true;
+            this.dgv_ylp.RowHeadersVisible = false;
+            this.dgv_ylp.RowHeadersWidth = 50;
+            this.dgv_ylp.RowTemplate.Height = 30;
+            this.dgv_ylp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_ylp.Size = new System.Drawing.Size(253, 490);
+            this.dgv_ylp.TabIndex = 9;
+            this.dgv_ylp.TabStop = false;
+            this.dgv_ylp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ylp_CellClick);
+            // 
             // btn_Delete
             // 
             this.btn_Delete.BackColor = System.Drawing.Color.Transparent;
@@ -628,6 +690,44 @@
             this.pn_ply.Name = "pn_ply";
             this.pn_ply.Size = new System.Drawing.Size(289, 570);
             this.pn_ply.TabIndex = 2;
+            // 
+            // dgv_ply
+            // 
+            this.dgv_ply.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_ply.BackgroundColor = System.Drawing.Color.LightCoral;
+            this.dgv_ply.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_ply.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.IndianRed;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("SVN-Sarifa", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Salmon;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_ply.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_ply.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightCoral;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("SVN-Sarifa", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Firebrick;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_ply.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_ply.EnableHeadersVisualStyles = false;
+            this.dgv_ply.GridColor = System.Drawing.Color.DarkRed;
+            this.dgv_ply.Location = new System.Drawing.Point(15, 3);
+            this.dgv_ply.MultiSelect = false;
+            this.dgv_ply.Name = "dgv_ply";
+            this.dgv_ply.ReadOnly = true;
+            this.dgv_ply.RowHeadersVisible = false;
+            this.dgv_ply.RowHeadersWidth = 50;
+            this.dgv_ply.RowTemplate.Height = 30;
+            this.dgv_ply.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_ply.Size = new System.Drawing.Size(260, 564);
+            this.dgv_ply.TabIndex = 10;
+            this.dgv_ply.TabStop = false;
+            this.dgv_ply.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_ply_CellMouseClick);
             // 
             // btn_Filter
             // 
@@ -711,28 +811,6 @@
             this.label11.TabIndex = 16;
             this.label11.Text = "Bộ lọc tìm kiếm";
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("SVN-Sarifa", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.DarkRed;
-            this.label12.Location = new System.Drawing.Point(219, 125);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(52, 31);
-            this.label12.TabIndex = 16;
-            this.label12.Text = "(cm)";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("SVN-Sarifa", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.DarkRed;
-            this.label13.Location = new System.Drawing.Point(445, 125);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(48, 31);
-            this.label13.TabIndex = 17;
-            this.label13.Text = "(kg)";
-            // 
             // btn_NotLike
             // 
             this.btn_NotLike.BackColor = System.Drawing.Color.Transparent;
@@ -748,81 +826,20 @@
             this.btn_NotLike.UseVisualStyleBackColor = false;
             this.btn_NotLike.Click += new System.EventHandler(this.btn_NotLike_Click);
             // 
-            // dgv_ylp
+            // btn_Path
             // 
-            this.dgv_ylp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_ylp.BackgroundColor = System.Drawing.Color.LightCoral;
-            this.dgv_ylp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_ylp.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.IndianRed;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("SVN-Sarifa", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DarkRed;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Salmon;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.DarkRed;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_ylp.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgv_ylp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LightCoral;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("SVN-Sarifa", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.DarkRed;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Firebrick;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.DarkRed;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_ylp.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgv_ylp.EnableHeadersVisualStyles = false;
-            this.dgv_ylp.GridColor = System.Drawing.Color.DarkRed;
-            this.dgv_ylp.Location = new System.Drawing.Point(18, 3);
-            this.dgv_ylp.MultiSelect = false;
-            this.dgv_ylp.Name = "dgv_ylp";
-            this.dgv_ylp.ReadOnly = true;
-            this.dgv_ylp.RowHeadersVisible = false;
-            this.dgv_ylp.RowHeadersWidth = 50;
-            this.dgv_ylp.RowTemplate.Height = 30;
-            this.dgv_ylp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_ylp.Size = new System.Drawing.Size(253, 490);
-            this.dgv_ylp.TabIndex = 9;
-            this.dgv_ylp.TabStop = false;
-            this.dgv_ylp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ylp_CellClick);
-            // 
-            // dgv_ply
-            // 
-            this.dgv_ply.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_ply.BackgroundColor = System.Drawing.Color.LightCoral;
-            this.dgv_ply.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_ply.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.IndianRed;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("SVN-Sarifa", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.DarkRed;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Salmon;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.DarkRed;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_ply.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgv_ply.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.LightCoral;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("SVN-Sarifa", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.DarkRed;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Firebrick;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.DarkRed;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_ply.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dgv_ply.EnableHeadersVisualStyles = false;
-            this.dgv_ply.GridColor = System.Drawing.Color.DarkRed;
-            this.dgv_ply.Location = new System.Drawing.Point(15, 3);
-            this.dgv_ply.MultiSelect = false;
-            this.dgv_ply.Name = "dgv_ply";
-            this.dgv_ply.ReadOnly = true;
-            this.dgv_ply.RowHeadersVisible = false;
-            this.dgv_ply.RowHeadersWidth = 50;
-            this.dgv_ply.RowTemplate.Height = 30;
-            this.dgv_ply.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_ply.Size = new System.Drawing.Size(260, 564);
-            this.dgv_ply.TabIndex = 10;
-            this.dgv_ply.TabStop = false;
-            this.dgv_ply.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_ply_CellMouseClick);
+            this.btn_Path.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Path.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Path.BackgroundImage")));
+            this.btn_Path.FlatAppearance.BorderSize = 0;
+            this.btn_Path.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSalmon;
+            this.btn_Path.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSalmon;
+            this.btn_Path.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Path.Location = new System.Drawing.Point(645, 63);
+            this.btn_Path.Name = "btn_Path";
+            this.btn_Path.Size = new System.Drawing.Size(48, 48);
+            this.btn_Path.TabIndex = 7;
+            this.btn_Path.UseVisualStyleBackColor = false;
+            this.btn_Path.Click += new System.EventHandler(this.btn_Path_Click);
             // 
             // Main
             // 
@@ -860,11 +877,11 @@
             this.pn_LikeList.ResumeLayout(false);
             this.pn_LikeList.PerformLayout();
             this.pn_ylp.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ylp)).EndInit();
             this.pn_ply.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ply)).EndInit();
             this.pn_filter.ResumeLayout(false);
             this.pn_filter.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_ylp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_ply)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -923,6 +940,7 @@
         private System.Windows.Forms.Button btn_NotLike;
         private System.Windows.Forms.DataGridView dgv_ylp;
         private System.Windows.Forms.DataGridView dgv_ply;
+        private System.Windows.Forms.Button btn_Path;
     }
 }
 
