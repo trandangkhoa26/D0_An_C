@@ -112,6 +112,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SINDERDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Stickercomming.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Stickercomming.Designer.cs">
+      <DependentUpon>Stickercomming.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stickergoing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Stickergoing.Designer.cs">
+      <DependentUpon>Stickergoing.cs</DependentUpon>
+    </Compile>
     <Compile Include="User.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +162,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Stickercomming.resx">
+      <DependentUpon>Stickercomming.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stickergoing.resx">
+      <DependentUpon>Stickergoing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User.resx">
       <DependentUpon>User.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +197,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\test.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

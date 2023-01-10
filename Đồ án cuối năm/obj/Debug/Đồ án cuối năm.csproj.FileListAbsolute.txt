@@ -25,3 +25,27 @@ C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\bin\Debu
 C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.xml
 C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.xml
 C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debug\Đồ án cuối năm.csproj.CopyComplete
+C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\bin\Debug\Đồ án cuối năm.exe.config
+C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\bin\Debug\Đồ án cuối năm.exe
+C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\bin\Debug\Đồ án cuối năm.pdb
+C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\bin\Debug\Bunifu.Licensing.dll
+C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
+C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.xml
+C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.xml
+C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\obj\Debug\Đồ án cuối năm.csproj.AssemblyReference.cache
+C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\obj\Debug\Đồ án cuối năm.csproj.SuggestedBindingRedirects.cache
+C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\obj\Debug\Đồ_án_cuối_năm.CheckInfo.resources
+C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\obj\Debug\Đồ_án_cuối_năm.History.resources
+C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\obj\Debug\Đồ_án_cuối_năm.Incomming.resources
+C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\obj\Debug\Đồ_án_cuối_năm.Login.resources
+C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\obj\Debug\Đồ_án_cuối_năm.Main.resources
+C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\obj\Debug\Đồ_án_cuối_năm.Messenger.resources
+C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\obj\Debug\Đồ_án_cuối_năm.Outgoing.resources
+C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\obj\Debug\Đồ_án_cuối_năm.Properties.Resources.resources
+C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\obj\Debug\Đồ_án_cuối_năm.User.resources
+C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\obj\Debug\Đồ án cuối năm.csproj.GenerateResource.cache
+C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\obj\Debug\Đồ án cuối năm.exe.licenses
+C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\obj\Debug\Đồ án cuối năm.csproj.CoreCompileInputs.cache
+C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\obj\Debug\Đồ án cuối năm.csproj.CopyComplete
+C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\obj\Debug\Đồ án cuối năm.exe
+C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\obj\Debug\Đồ án cuối năm.pdb
