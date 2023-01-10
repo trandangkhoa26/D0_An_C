@@ -46,17 +46,23 @@ namespace Đồ_án_cuối_năm
         {
             lb_Name.Text = thisInfo.tennguoidung;
 
-            if (!File.Exists(@"C:\Users\phung\source\repos\D0_An_C\img\" + thisInfo.id.ToString() + ".jpg"))
-            //if (!File.Exists(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\" + thisInfo.id.ToString() + ".jpg"))
+            for (int i = 1; i < 25; i++)
             {
-                //Image image = Image.FromFile(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\other.png");
-                Image image = Image.FromFile(@"C:\Users\phung\source\repos\D0_An_C\img\other.png");
+                var listViewItem = lv_Sticker.Items.Add(i.ToString());
+                listViewItem.ImageKey = Convert.ToString(i + ".png");
+            }
+
+            //if (!File.Exists(@"C:\Users\phung\source\repos\D0_An_C\img\" + thisInfo.id.ToString() + ".jpg"))
+            if (!File.Exists(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\" + thisInfo.id.ToString() + ".jpg"))
+            {
+                Image image = Image.FromFile(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\other.png");
+                //Image image = Image.FromFile(@"C:\Users\phung\source\repos\D0_An_C\img\other.png");
                 pb_AvaReciver.BackgroundImage = image;
             }
             else
             {
-                //Image image = Image.FromFile(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\" + thisInfo.id.ToString() + ".jpg");
-                Image image = Image.FromFile(@"C:\Users\phung\source\repos\D0_An_C\img\" + thisInfo.id.ToString() + ".jpg");
+                Image image = Image.FromFile(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\" + thisInfo.id.ToString() + ".jpg");
+                //Image image = Image.FromFile(@"C:\Users\phung\source\repos\D0_An_C\img\" + thisInfo.id.ToString() + ".jpg");
                 pb_AvaReciver.BackgroundImage = image;
             }
 
@@ -88,18 +94,18 @@ namespace Đồ_án_cuối_năm
             bubble.Width = pn_Chat.Width - 10;
             bubble.Message = message;
 
-            if (!File.Exists(@"C:\Users\phung\source\repos\D0_An_C\img\" + thisInfo.id.ToString() + ".jpg"))
-            //if (!File.Exists(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\" + thisInfo.id.ToString() + ".jpg"))
+            //if (!File.Exists(@"C:\Users\phung\source\repos\D0_An_C\img\" + thisInfo.id.ToString() + ".jpg"))
+            if (!File.Exists(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\" + thisInfo.id.ToString() + ".jpg"))
             {
-                //Image image = Image.FromFile(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\other.png");
-                Image image = Image.FromFile(@"C:\Users\phung\source\repos\D0_An_C\img\other.png");
+                Image image = Image.FromFile(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\other.png");
+                //Image image = Image.FromFile(@"C:\Users\phung\source\repos\D0_An_C\img\other.png");
 
                 bubble.Avatar = image;
             }
             else
             {
-                // Image image = Image.FromFile(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\" + thisInfo.id.ToString() + ".jpg");
-                Image image = Image.FromFile(@"C:\Users\phung\source\repos\D0_An_C\img\" + thisInfo.id.ToString() + ".jpg");
+                Image image = Image.FromFile(@"C:\Users\netpr\source\repos\Đồ án cuối năm\img\" + thisInfo.id.ToString() + ".jpg");
+                //Image image = Image.FromFile(@"C:\Users\phung\source\repos\D0_An_C\img\" + thisInfo.id.ToString() + ".jpg");
                 bubble.Avatar = image;
             }
 
@@ -138,6 +144,44 @@ namespace Đồ_án_cuối_năm
         private void btn_Send_Click(object sender, EventArgs e)
         {
             Send();
+        }
+
+        private void btn_Sticker_Click(object sender, EventArgs e)
+        {
+            if (pn_Sticker.Visible == false)
+                pn_Sticker.Visible = true;
+            else pn_Sticker.Visible = false;
+
+        }
+
+        private void lv_Sticker_MouseClick(object sender, MouseEventArgs e)
+        {
+            ListViewItem item = lv_Sticker.SelectedItems[0];
+            string theItem = item.Text.ToString();
+            
+
+        }
+
+        private void btn_Picture_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog pic = new OpenFileDialog()
+            {
+                FileName = "...",
+                Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;",
+                Title = "Chọn ảnh",
+                Multiselect = false
+            };
+        }
+
+        private void btn_File_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog pic = new OpenFileDialog()
+            {
+                FileName = "...",
+                Filter = "All files (*.*)|*.*",
+                Title = "Chọn file",
+                Multiselect = false
+            };
         }
     }
 }

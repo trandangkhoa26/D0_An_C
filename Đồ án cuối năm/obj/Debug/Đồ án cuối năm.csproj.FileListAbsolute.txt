@@ -49,3 +49,5 @@ C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\obj\Debug\Đồ án cu
 C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\obj\Debug\Đồ án cuối năm.csproj.CopyComplete
 C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\obj\Debug\Đồ án cuối năm.exe
 C:\Users\phung\Source\Repos\D0_An_C\Đồ án cuối năm\obj\Debug\Đồ án cuối năm.pdb
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debug\Đồ_án_cuối_năm.Stickercomming.resources
+C:\Users\netpr\source\repos\Đồ án cuối năm\Đồ án cuối năm\obj\Debug\Đồ_án_cuối_năm.Stickergoing.resources
